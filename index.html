@@ -4,12 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <title>Curriculum Vitae Violeta Romero</title>
 </head>
 <body>
-   <h1>Violeta Romero</h1>
-   <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Violeta Romero" width="200" height="200">
-   <h2>Front-end developer</h2>
-   
+    <div class="contenedor">
+
+        <nav class="nav-bar">
+            <button class="nav-boton" onclick="accion()">Menú</button>
+            <a href="#datosid" class="nav-enlace desaparece">Datos personales</a>
+            <a href="#redesid" class="nav-enlace desaparece">Redes</a>
+            <a href="#contactoid" class="nav-enlace desaparece">Contacto</a>
+            <a href="#perfilid" class="nav-enlace desaparece">Perfil profesional</a>
+            <a href="#experienciaid" class="nav-enlace desaparece">Experiencia</a>
+            <a href="#habilidadesid" class="nav-enlace desaparece">Habilidades</a>
+            <a href="#idiomasid" class="nav-enlace desaparece">Idiomas</a>
+        </nav>
+
+        <header class="header">
+            <img class="imagen" src="imagenes/violetaromerocirc.png" alt="Violeta Romero">
+            <div class="texto">
+                <h1>Violeta Romero</h1>
+                <h2>Lorem-ipsum developer</h2>
+            </div>
+        </header>
+
+        <div class="columna-izquierda cajaInfo">
+            <div class="datos cajaInfo" id="datos">
+                <h3>Datos personales</h3>
+                <ul>
+                    <li>Teléfono: (210) 751-5335</li>
+                    <li>E-mail: violeta.romero@example.com</li>
+                    <li>Fecha de nacimiento: 11/5/1989</li>
+                    <li>DNI: 34123456</li>
+                    <li>Ubicación: Buenos Aires, Argentina</li>
+                </ul>
+            </div>
+            <div class="redes cajaInfo" id="redesid">
+                <h3>Redes</h3>
+                <a href="https://www.lipsum.com/" target="_blank"><img src="imagenes/linkedin.png" alt="Linkedin" width="40" height="30"></a>
+                <a href="https://www.lipsum.com/" target="_blank"><img src="imagenes/instagram.png" alt="Instagram" width="30" height="30"></a>
+                <a href="https://www.lipsum.com/" target="_blank"><img src="imagenes/facebook.png" alt="Facebook" width="40" height="30"></a>
+                <a href="https://www.lipsum.com/" target="_blank"><img src="imagenes/twitter.png" alt="Twitter" width="30" height="28"></a>
+            </div>
+            <div class="contacto cajaInfo" id="contactoid">
+                <h3>Contacto</h3>
+                <form method="post">
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre y apellido" placeholder="Ingrese su nombre y apellido"/>
+                    <label>E-mail:</label>
+                    <input type="email" name="e-mail" placeholder="Ingrese su e-mail"/>
+                    <label for="msg">Mensaje:</label>
+                    <textarea name="mensaje" id="msg" cols="20" rows="10" placeholder="Esbriba su mensaje"></textarea>
+                    <button type="submit">Envía tu mensaje</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="columna-derecha cajaInfo">
+            <div class="perfil cajaInfo" id="perfilid">
+                <h3>Perfil profesional</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit elit sit amet purus feugiat varius. Cras euismod condimentum purus, eget tempus diam pellentesque eu. Nam consequat mi sed quam pulvinar, ut porta lectus efficitur.</p>
+            </div>
+            <div class="experiencia cajaInfo" id="experienciaid">
+                <h3>Experiencia profesional</h3>
+                <ul>
+                    <li><strong>Programadora web</strong>
+                        <ul><i>Banco BBWA Agosto 2017- Diciembre 2019</i>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum nunc ut magna tincidunt tempor. Morbi mollis, nisl a vehicula cursus, magna tellus faucibus est, faucibus tempus odio neque quis purus.</li>
+                            <li> Nam porttitor enim non dui semper pellentesque ut sed nulla. Duis est quam, tincidunt quis lobortis eu, laoreet ut nisl. Donec ac auctor enim. Aliquam euismod, dolor eu fringilla vulputate, magna augue dignissim augue, nec tincidunt libero ipsum et odio.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Desarrolladora web</strong>
+                        <ul><i>Flame Analitycs Enero 2016- Agosto 2017</i>
+                            <li>Nullam fringilla in tortor id mollis. Nullam tempor tempus risus, nec malesuada enim dictum ut. Sed elementum diam vitae dolor tincidunt, ut sodales enim rutrum.</li>
+                            <li>Ut at turpis justo. Etiam consectetur mauris id dui condimentum congue. Nam at malesuada urna. Suspendisse maximus elit vitae luctus consequat. Fusce tempor enim nec sem facilisis, ut imperdiet tellus blandit.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="habilidades cajaInfo" id="habilidadesid">
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>Phasellus quis dolor eu tortor volutpat posuere, phasellus auctor suscipit quam.</li>
+                    <li>Ut eget pharetra lorem, vitae euismod arcu. Aliquam erat volutpat.</li>
+                    <li>Cras dapibus, sem quis malesuada eleifend, metus tellus tempor orci, tristique pharetra leo nulla vel ipsum.</li>
+                </ul>
+            </div>
+    
+            <div class="idiomas cajaInfo" id="idiomasid">
+                <h3>Idiomas</h3>
+                <ul>
+                    <li>Español</li>
+                        <ul>
+                            <li>Escrito: Nativo</li>
+                            <li>Oral: Nativo</li>
+                        </ul>
+                    <li>Inglés</li>
+                        <ul>
+                            <li>Escrito: Avanzado</li>
+                            <li>Oral: Avanzado</li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
 </body>
 </html>

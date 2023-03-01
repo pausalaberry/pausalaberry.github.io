@@ -1,0 +1,137 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+html {
+    height: 100%;
+}
+  
+body{
+  background-image: linear-gradient(to right, #bf95d8, #afa6e9, #9fb6f5, #afa6e9, #bf95d8);
+  font-family: "Lora", serif;
+  min-height: 100%;
+  font-size: 1.2rem;
+  min-height: 100%;
+}
+
+.contenedor > * {
+  box-shadow: -1px 1px 7px 0px black;
+  border-radius: 4px;
+  padding: 5px;
+  text-align: center;
+}
+
+.nav-bar {
+  grid-area: nav-bar;
+  
+}
+
+.nav-enlace:hover {
+  background: rgb(145, 194, 235);
+}
+
+nav {
+  display: inline-block;
+  color: #8c86b5;
+  background: #615a89c5;
+  text-decoration: none;
+  align-self:normal;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-boton {
+  background: #615a89c5;
+  color: #8c86b5;
+  padding: 10px 0px;
+  border: 2px solid #8c86b5;
+  display: none;
+}
+
+.header {
+  grid-area: header;
+}
+
+label {
+  display: inline-block;
+  width: 15vw;
+  text-align: left;
+}
+
+input,textarea {
+  font: 1em sans-serif;
+  width: 15vw;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  border-color: #000;
+} 
+
+.redes {
+  align-content: center;
+}
+
+.contenedor {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: 
+    "nav-bar"
+    "header"
+    "columna-izquierda"
+    "columna-derecha"
+}
+
+.cajaInfo {
+  text-align: justify;
+  background-color: #e6e6ff;
+  margin: 20px;
+  border: 3px solid #615a89c5;
+  padding: 20px;
+  font-size: 1em;
+  list-style: none;
+  border-radius: 1em;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    margin: 10px 0px;
+  }
+  .nav-enlace {
+    margin: 10px 0;
+  }
+  .nav-boton {
+    display: inline-block;
+  }
+  .desaparece {
+    display: none;
+  }
+} 
+
+@media (min-width:600px) {
+  .contenedor {
+    grid-template: 
+    "nav-bar           nav-bar" 6vh
+    "header            header" 30vh
+    "columna-izquierda columna-derecha" auto /
+    30vw               65vw;
+  }
+  h1 {
+    font-size: 7vh;
+  }
+  .imagen {
+    float: left;
+    margin: 10px;
+    padding: 0px 30px 25px 35px;
+  }
+  .texto {
+    margin: 20px;
+    padding: 30px 0px 30px 0px;
+  }
+}
